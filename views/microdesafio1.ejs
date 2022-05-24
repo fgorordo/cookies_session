@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Microdesafio 1</title>
+  <style>
+    <% if (color) {%>
+      body{
+      background-color:<%=color%>;
+      }
+      <% } %>
+  </style>
+</head>
+<body>
+  <% if (locals.errors) { %>
+    <% errors.forEach(error => { %>
+      <li>
+        <%= error.msg %> 
+      </li>
+    <% }) %>
+  <% } %>
+  <form action="/response" method="POST">
+    <label for="name">Ingrese su nombre: </label><br>
+    <input type="text" name="name"><br>
+    <label for="color">Seleccione un color: </label><br>
+    <select name="color" id="">
+      <option value="red">Rojo</option>
+      <option value="green">Verde</option>
+      <option value="blue">Azul</option>
+      <option value="yellow">Amarillo</option>
+      <option value="lightblue">Celeste</option>
+      <option value="orange">Naranja</option>
+    </select><br>
+    <label for="email">Ingrese su email: </label><br>
+    <input type="email" name="email"><br>
+    <label for="age">Ingrese su edad: </label><br>
+    <input type="text" name="age"><br>
+    <label for="rememberColor">Recordar color</label>
+    <input type="checkbox" name="rememberColor">
+    <div>
+    <input type="submit" value="Enviar :)" class="main__btn">
+    </div>
+  </form>
+  <form action="/" method="POST">
+  <input type="submit" value="Borrar color :(">
+  </form>
+</body>
+</html>

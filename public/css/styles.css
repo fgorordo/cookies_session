@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+  border: 3px solid #e5e5e5;
+}
+form > label {
+  color: #1c1c1c;
+  font-size: 1.5em;
+
+}
+form > input, 
+form > select {
+  width: 100%;
+  max-width: 250px;
+  background-color: #e5e5e5;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid #1c1c1c;
+  height: 25px;
+}
+
+form > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.main__btn {
+  font-size: 1.2em;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
