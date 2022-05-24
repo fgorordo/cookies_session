@@ -28,7 +28,7 @@ const controller = {
     res.render('microdesafio3',{color:req.session.color,name:req.session.name})
   },
   micro3Eliminarcolor: (req,res) => {
-    res.cookie('rememberColor',req.body.color, {maxAge: 3600000})
+    res.cookie('rememberColor','unset', {maxAge: 3600000})
     req.session.color = 'unset';
     res.redirect('/')
   }
